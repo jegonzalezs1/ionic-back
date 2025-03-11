@@ -35,7 +35,7 @@
 ![image](https://github.com/user-attachments/assets/49273d48-6624-4034-b1e0-8d0b44297c7b)
 
 * Si queremos cerrar la sesión hacemos clic en **Cerrar sesión**
-* 
+  
 ![image](https://github.com/user-attachments/assets/67928898-c08e-45a4-a76c-79135a00b1af)
 
 * Si queremos continuar con la sesión hacemos clic en **Cancelar**
