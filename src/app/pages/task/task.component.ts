@@ -39,16 +39,6 @@ export class TaskComponent implements OnInit {
     localStorage.setItem('tareas', JSON.stringify(tareasActualizadas));
   }
 
-  // Eliminar una tarea del Local Storage
-  eliminarTarea(): void {
-    const tareasDesdeLS = this.obtenerTareasLS();
-    const tareasActualizadas = tareasDesdeLS.filter((t) => t.id !== this.tarea.id);
-
-    // Guardar las tareas actualizadas en el Local Storage
-    localStorage.setItem('tareas', JSON.stringify(tareasActualizadas));
-    this.tarea = { id: 0, titulo: '', fecha: '', completado: false }; // Reiniciar la tarea
-  }
-
   // Obtener tareas desde el Local Storage
   obtenerTareasLS(): ITarea[] {
     const tareasGuardadas = localStorage.getItem('tareas');
