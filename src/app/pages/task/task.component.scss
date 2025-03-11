@@ -1,0 +1,75 @@
+  ion-title {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  ion-label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    z-index: 10;
+    position: relative;
+  }
+  
+  ion-button {
+    --border-color: #000; /* Color del borde */
+    --background: transparent; /* Fondo transparente */
+    --color: #000; /* Texto del botón en color oscuro */
+    --border-width: 1; /* Quita el borde */
+    font-size: 1rem; /* Ajusta el tamaño del texto del botón */
+    height: 40px; /* Ajusta el alto del botón */
+    text-transform: capitalize;
+    letter-spacing: 0px;
+  }
+
+  ion-icon {
+    font-size: 18px;
+    color: #000000;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Tamaño del texto "Jose Antonio" */
+  }  
+  
+  .custom-card {
+    margin-top: 8px; /* Separación superior */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    width: 98%; /* Asegura que ocupe todo el ancho disponible */
+  }
+  
+  .custom-input {
+    --padding-start: 10px; /* Espaciado interno a la izquierda */
+    --padding-end: 10px; /* Espaciado interno a la derecha */
+    width: 100%; /* Extiende el ancho al contenedor completo */
+    height: 40px; /* Mantiene la altura fija */
+    font-size: 1rem; /* Mantiene el tamaño del texto */
+    border: none; /* Sin bordes visibles */
+    overflow: hidden; /* Oculta cualquier barra de desplazamiento */
+  }
+  
+  .custom-textarea {
+    --padding-start: 10px; /* Espaciado interno inicial */
+    --padding-end: 10px; /* Espaciado interno final */
+    width: 100%; /* Ocupa todo el ancho disponible del contenedor */
+    max-width: 600px; /* Ancho máximo permitido */
+    min-height: 200px; /* Altura mínima */
+    font-size: 1rem; /* Ajusta el tamaño de texto */
+    border: none; /* Sin bordes visibles */
+    resize: none; /* Evita redimensionamiento manual */
+    overflow: hidden; /* Oculta barras de desplazamiento */
+  }
+  
+  /* Configura el textarea para expansión automática */
+  ion-textarea[autoGrow="true"] {
+    overflow: hidden; /* Elimina la barra de desplazamiento */
+    height: auto; /* Ajusta altura automáticamente según el contenido */
+    min-height: 200px; /* Altura mínima inicial */
+    max-height: 600px; /* Altura máxima permitida */
+  }  
+
+  .custom-item {
+    --background: #fff; /* Fondo muy claro para el contenedor */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 10px;
+  }

@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar class="toolbar-container">
+    <ion-buttons slot="start">
+      <!-- Botón Atrás con texto "Atrás" -->
+      <ion-back-button defaultHref="/home" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <!-- Título a la izquierda -->
+    <ion-title>Mis tareas</ion-title>
+    <!-- Menú desplegable activado -->
+    <ion-buttons slot="end">
+      <ion-toolbar class="toolbar-container">
+        <ion-button (click)="togglePerfil()" slot="end" fill="clear">
+          <ion-icon [name]="perfilDesplegado ? 'close-outline' : 'reorder-four'" class="menu-icon"></ion-icon>
+        </ion-button>
+      </ion-toolbar>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!-- Panel desplegable para perfil -->
+  <div *ngIf="perfilDesplegado" class="profile-dropdown">
+    <ion-title>
+      Menú
+      <p class="sub-label">
+        Perfil y cuenta
+      </p>
+    </ion-title>
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="./assets/avatar.jpeg" alt="Avatar">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ usuario.nombre }}</h2>
+        <p>{{ usuario.email }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-card>
+      <ion-item button class="menu-item">
+        <ion-icon name="settings-outline" class="small-icon" slot="start"></ion-icon>
+        <ion-label>Ajustes</ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item button class="menu-item">
+        <ion-icon name="person-outline" class="small-icon" slot="start"></ion-icon>
+        <ion-label>Privacidad</ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item button class="menu-item" (click)="abrirPopup()">
+        <ion-icon name="exit-outline" class="small-icon" slot="start"></ion-icon>
+        <ion-label>Cerrar sesión</ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Contenedor para "Añadidas recientemente" -->
+    <div class="header-container">
+      <div class="title-container aligned-header">
+        <h4>Añadidas recientemente</h4>
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <!-- Lista de tareas -->
+    <ion-card *ngFor="let tarea of tareas">
+      <ion-item lines="none">
+        <ion-label>
+          <h2>{{ tarea.titulo }}</h2>
+          <h3>{{ tarea.fecha }}</h3>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+  <!-- Botón flotante para agregar tarea -->
+  <div class="button-container">
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="agregarTarea()">
+        <ion-icon name="add-circle" class="large-icon"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <!-- Texto debajo del botón -->
+    <div class="button-text">Añadir tarea</div>
+  </div>
+</ion-content>
+
+<div *ngIf="mostrarPopup" class="popup-overlay">
+  <div class="popup">
+    <ion-title>Cerrar sesión</ion-title>
+    <p>No habrá vuelta atrás si cierras sesión</p>
+    <div class="popup-buttons">
+      <ion-card class="popup-card">
+        <ion-item button class="menu-item" (click)="cerrarSesion()">
+          <ion-icon name="exit-outline" class="small-icon" slot="start"></ion-icon>
+          <ion-label class="popup-label">Cerrar sesión</ion-label>
+        </ion-item>
+      </ion-card>
+      <ion-card class="popup-card">
+        <ion-item button class="menu-item" (click)="cerrarPopup()">
+          <ion-icon name="close-outline" class="small-icon" slot="start"></ion-icon>
+          <ion-label class="popup-label">Cancelar</ion-label>
+        </ion-item>
+      </ion-card>
+    </div>
+  </div>
+</div>
+

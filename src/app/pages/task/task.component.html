@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar class="toolbar-container">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Campo Título de la tarea -->
+    <ion-item class="custom-item">
+      <ion-label position="stacked">
+        <h3>Título de la tarea</h3>
+      </ion-label>
+      <ion-card class="custom-card">
+        <ion-input
+          placeholder="Escribe una tarea"
+          clearInput="true"
+          [(ngModel)]="tarea.titulo"
+          class="custom-input">
+        </ion-input>
+      </ion-card>
+    </ion-item>
+    <!-- Campo Descripción de la tarea -->
+    <ion-item class="custom-item">
+      <ion-label position="stacked">
+        <h3>Descripción de la tarea</h3>
+      </ion-label>
+      <ion-card class="custom-card">
+        <ion-textarea 
+          placeholder="Detalle de la tarea"
+          [(ngModel)]="tarea.fecha"
+          autoGrow="true"
+          class="custom-textarea">
+        </ion-textarea>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="full" (click)="guardarTarea()">
+      <ion-icon name="checkmark" slot="start"></ion-icon>
+      Guardar cambios
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

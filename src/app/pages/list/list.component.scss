@@ -1,0 +1,303 @@
+/* Asegura que el contenedor del toolbar tenga posicionamiento relativo */
+.toolbar-container {
+  position: relative;
+}
+
+/* El panel desplegable se posiciona absolutamente dentro del header */
+.profile-dropdown {
+  position: absolute;
+  top: 56px; /* Ajusta según la altura del toolbar */
+  right: 0;
+  width: 250px; /* Ajusta el ancho a tus necesidades */
+  z-index: 1000;
+  /* Opcional: añade un borde o sombra para destacar el panel */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin: 0;
+  font-size: 14px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 12px; /* Tamaño del texto "Jose Antonio" */
+  color: #979797;
+}
+
+ion-title {
+  color: #000000;
+  font-weight: bold;
+}
+
+ion-icon {
+  font-size: 22px;
+  color: #000000;
+}
+
+/* Ícono grande dentro del botón púrpura */
+.large-icon {
+  font-size: 32px; /* Tamaño grande del ícono */
+  color: #fff; /* Color blanco del ícono */
+  display: flex; /* Centrado */
+  align-items: center; /* Centra el ícono verticalmente */
+  justify-content: center; /* Centra el ícono horizontalmente */
+}
+
+/* Otros íconos en el sistema, tamaño pequeño */
+.small-icon {
+  font-size: 22px; /* Íconos pequeños */
+  color: #000; /* Ícono negro por defecto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+ion-label {
+  color: #000000;
+  font-weight: bold;
+}
+
+ion-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+ion-buttons[slot="end"] {
+  display: flex;
+  align-items: center;
+}
+
+ion-card {
+  margin-bottom: 15px; /* Espaciado entre tarjetas */
+  padding: 2px; /* Espaciado interno */
+  flex-shrink: 0;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+p.sub-label {
+  font-size: 0.9rem; /* Disminuye el tamaño del texto */
+  font-weight: bold; /* Estilo más sencillo */
+  color: #000; /* Mantén el color negro */
+  transition: color 0.3s ease; /* Suave cambio de color en hover */
+}
+
+.icon-white {
+  color: #fff; /* Color blanco */
+}
+
+.aligned-header {
+  display: flex; /* Activa flexbox para la alineación */
+  align-items: center; /* Alinea el texto verticalmente con la flecha */
+  gap: 8px; /* Espacio entre la flecha y el texto */
+  margin-left: 0; /* Ajusta la posición del contenedor hacia la flecha */
+}
+
+.aligned-header h4 {
+  margin-left: 12px; /* Ajusta la posición horizontal */
+  font-size: 16px;
+  color: #000;
+}
+
+ion-fab {
+  position: fixed; /* Asegura que sea flotante */
+  bottom: 20px; /* Posición desde la parte inferior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Corrige la alineación horizontal */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+ion-fab-button {
+  --background: #955ad8; /* Color del fondo */
+  --background-hover: #dc80f8; /* Fondo al pasar el mouse */
+  --color: white; /* Ícono blanco */
+  box-shadow: none; /* Sombra */
+  font-size: 1.4rem; /* Tamaño del ícono */
+  display: flex;
+  align-items: center; /* Centra el ícono verticalmente */
+  justify-content: center; /* Centra el ícono horizontalmente */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Apilar el botón y el texto */
+  align-items: center; /* Centrar horizontalmente */
+  position: fixed; /* Fijar la posición en la pantalla */
+  bottom: 30px; /* Espacio desde el borde inferior */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajustar el centro */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.button-text {
+  margin-top: 18px; /* Espacio entre el botón y el texto */
+  font-size: 14px; /* Tamaño del texto */
+  color: #000; /* Color negro */
+  text-align: center; /* Centra el texto */
+}
+
+.user-info {
+  margin-left: 8px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+/* Estilo general para el menú */
+.menu-item {
+  --background: transparent; /* Fondo transparente por defecto */
+  display: flex;
+  color: #000; /* Texto e íconos en negro */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.menu-item ion-icon {
+  color: #000; /* Iconos en negro por defecto */
+  transition: color 0.3s ease;
+}
+
+/* Hover: Fondo rojo, texto e íconos blancos */
+.menu-item:hover {
+  --background: #ff0000; /* Fondo rojo en hover */
+  color: #fff; /* Texto blanco */
+}
+
+.menu-item:hover ion-icon {
+  color: #fff; /* Íconos blancos en hover */
+}
+
+.menu-item:hover ion-label {
+  color: #fff; /* Íconos blancos en hover */
+}
+
+/* Activo/Clic: Fondo darkred */
+.menu-item:active {
+  --background: darkred; /* Fondo rojo oscuro al hacer clic */
+  color: #fff; /* Texto e íconos blancos */
+}
+
+.menu-item ion-label {
+  font-size: 1rem; /* Tamaño del texto */
+  color: inherit; /* Usa el color actual del contenedor */
+  font-weight: bold; /* Resalta el texto */
+  transition: color 0.3s ease; /* Cambios de color suaves */
+}
+
+/* Línea divisoria personalizada */
+.section-divider {
+  border: none; /* Quita bordes predeterminados */
+  height: 2px; /* Define el grosor de la línea */
+  background-color: #000; /* Color negro */
+  margin: 10px 0; /* Espaciado entre la línea y otros elementos */
+}
+
+/* Botón del menú (estilo inicial) */
+.menu-icon {
+  color: #000; /* Ícono negro por defecto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Menú desplegable */
+.profile-dropdown {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 250px;
+  z-index: 1000;
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  padding: 15px;
+}
+
+.logout {
+  --color: #f00; /* Texto rojo para cerrar sesión */
+}
+
+/* Botón del menú (estilo inicial) */
+.menu-icon {
+  color: #000; /* Ícono negro por defecto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Menú desplegable */
+.profile-dropdown {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 250px;
+  z-index: 1000;
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  padding: 15px;
+}
+
+/* Fondo de la superposición del popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que esté al frente */
+}
+
+/* Estilo del contenedor del popup */
+.popup {
+  background-color: white; /* Fondo del popup */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center;
+  font-size: 14px;
+  max-width: 400px;
+  width: 100%; /* Ajustable */
+}
+
+/* Botones dentro del popup */
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.popup-label {
+  font-size: 14px; /* Ajusta el tamaño del texto */
+  color: #fff; /* Cambia el color del texto */
+  font-weight: bold; /* Aplica negrita */
+  white-space: nowrap; /* Asegura que el texto no haga salto de línea */
+}
+
+.popup-label:hover {
+  color: #dc3545; /* Cambia el color al hacer hover */
+}
+
+.popup-card ion-label {
+  font-size: 14px; /* Tamaño ajustado */
+  color: #000000; /* Color para los textos del popup */
+  font-weight: bold; /* Negrita */
+}
+
+.logout-button {
+  background-color: #dc3545; /* Rojo */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: white; /* Blanco */
+  color: #6c757d; /* Gris */
+  border: 1px solid #6c757d;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}

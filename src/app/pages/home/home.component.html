@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="toolbar-container">
+    <div class="header-container">
+      <div class="title-container">
+        <h3>Jose Antonio</h3>
+      </div>
+    </div>
+  </ion-toolbar>
+
+  <!-- Sección de "Mis Tareas" con botón -->
+  <div class="header-container">
+    <div class="text-container">
+      <h4>Mis tareas</h4>
+    </div>
+    <ion-button fill="outline" color="dark" (click)="agregarTarea()">
+      Nuevo<ion-icon name="add-circle"></ion-icon>
+    </ion-button>
+  </div>
+</ion-header>
+
+<ion-content class="white-background">
+  <!-- Contenedor para "Mis tareas" -->
+  <div class="task-section mis-tareas">
+    <!-- Tarjetas de tareas actuales -->
+    <ion-card *ngFor="let tarea of tareasActivas">
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-checkbox slot="start" [checked]="tarea.completado" (ionChange)="marcarComoCompleta(tarea)"></ion-checkbox>
+          <ion-label>
+            <h2>{{ tarea.titulo }}</h2>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<!-- Separador visual con margen reducido -->
+<div class="section-divider" style="margin-top: -10px;">
+  <ion-toolbar class="toolbar-container">
+    <div class="header-container">
+      <div class="title-container">
+        <h4>Terminados</h4>
+      </div>
+    </div>
+  </ion-toolbar>
+</div>
+
+<ion-content class="white-background">
+  <!-- Contenedor para "Terminados" -->
+  <div class="task-section terminados">
+    <!-- Tarjetas de tareas terminadas -->
+    <ion-card *ngFor="let tarea of tareasTerminadas">
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-checkbox slot="start" [checked]="tarea.completado" disabled></ion-checkbox>
+          <ion-label class="tachado">
+            <h2>{{ tarea.titulo }}</h2>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

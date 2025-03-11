@@ -1,0 +1,214 @@
+/* Asegura que el contenedor del toolbar tenga posicionamiento relativo */
+.toolbar-container {
+  position: relative;
+  --background: #fff; /* Cambia el color de fondo */
+  --color: #333; /* Cambia el color del texto */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* El botón y el texto estarán en extremos opuestos */
+  align-items: center; /* Asegura que el botón y el texto estén alineados verticalmente */
+  padding: 10px 15px; /* Espaciado interno */
+  color: #000000; 
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* Alinea "Jose Antonio" y "Mis tareas" en columna */
+  align-items: flex-start; /* Alinea ambos textos hacia la izquierda */
+  gap: 4px; /* Espaciado entre los textos */
+}
+
+.title-container {
+  display: flex; /* Organiza el contenido en una fila */
+  flex-direction: column; /* Coloca los textos uno debajo del otro */
+  align-items: flex-start; /* Alinea ambos textos a la izquierda */
+  gap: 4px; 
+}
+/* El panel desplegable se posiciona absolutamente dentro del header */
+.profile-dropdown {
+  position: absolute;
+  top: 56px; /* Ajusta según la altura del toolbar */
+  right: 0;
+  width: 250px; /* Ajusta el ancho a tus necesidades */
+  z-index: 1000;
+  /* Opcional: añade un borde o sombra para destacar el panel */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+ion-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+ion-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+ion-buttons[slot="end"] {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 14px;
+}
+
+h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem; /* Tamaño del texto "Jose Antonio" */
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.2rem; /* Tamaño del texto "Mis tareas" */
+  color: #000000; /* Color gris claro */
+}
+
+ion-button {
+  --border-color: #000; /* Color del borde */
+  --background: transparent; /* Fondo transparente */
+  --color: #000; /* Texto del botón en color oscuro */
+  font-size: 1rem; /* Ajusta el tamaño del texto del botón */
+  height: 40px; /* Ajusta el alto del botón */
+  text-transform: capitalize;
+  letter-spacing: 0px;
+}
+
+ion-label {
+  color: #000000;
+  font-weight: bold;
+}
+
+ion-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; // Asegúrate de que esté encima de otros elementos
+}
+
+ion-fab-button {
+  --background: #3b82f6; // Cambia el color de fondo del botón
+  --background-hover: #2563eb; // Color al pasar el mouse
+  --color: white; // Color del ícono
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+ion-icon {
+  font-size: 18px;
+  color: #000000;
+}
+
+ion-card {
+  margin-bottom: 15px; /* Espaciado entre tarjetas */
+  padding: 10px; /* Espaciado interno */
+  flex-shrink: 0;
+  border: 1px solid #000; /* Borde negro sólido */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+ion-card-content {
+  padding: 2px; /* Reduce el espaciado interno del contenido */
+}
+
+ion-item {
+  --min-height: 30px; /* Reduce la altura mínima de los elementos */
+}
+
+ion-header {
+  border-bottom: 1px solid #000000;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --inner-padding: 0;
+}
+
+ion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye las secciones */
+  height: 100%; /* Asegúrate de que ocupe toda la pantalla */
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  border: 1px solid #000;
+  margin: 10px 0
+}
+
+.task-section {
+  margin: 15px 0px;
+  padding: 10px;
+  flex: 1; /* Haz que cada sección crezca proporcionalmente */
+  margin: 15px 0; /* Espaciado entre las secciones */
+  overflow-y: auto; /* Habilita scroll si hay muchas tareas */
+}
+
+/* Fondo y estilo de "Mis tareas" */
+.mis-tareas {
+  background-color: #fff; /* Fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px;
+}
+
+/* Fondo y estilo de "Terminados" */
+.terminados {
+  background-color: #fff; /* Fondo gris */
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.white-background {
+  background-color: #fff; /* Fondo blanco */
+  color: #000000; /* Texto en negro para contraste */
+}
+
+/* Línea divisoria */
+.section-divider {
+  border: none;
+  height: 2px;
+  background-color: #fff; /* Color de la línea */
+  margin: 20px 0;
+}
+
+.section-divider-line {
+  border: 1px solid #000; /* Línea negra */
+  margin: 100px 0; /* Espaciado superior e inferior */
+}
+
+.additional-content {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff; /* Fondo claro */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.additional-content ion-button {
+  margin-top: 10px;
+}
+
+.user-info {
+  margin-left: 8px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+.logout {
+  --background: red;
+  --background-activated: darkred;
+  color: #fff;
+}
+
+.tachado {
+  text-decoration: line-through; /* Aplica el tachado */
+  text-decoration-color: red; /* El color del tachado será rojo */
+  text-decoration-thickness: 2px; /* Ajusta el grosor del tachado (opcional) */
+  color: inherit; /* Mantén el texto en negro */
+}
